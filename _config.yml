@@ -2,9 +2,9 @@ title: WisTex United Docs
 description: A starter template for WisTex United Docs
 theme: just-the-docs
 
-url: https://github.com/Badger-RL
+url: https://github.com/wistex-united
 aux_links:
-  Github Organization: https://github.com/Badger-RL
+  Github Organization: https://github.com/wistex-united
 color_scheme: wis-tex
 
 logo: /assets/images/WisTex-United-Logo-250x250.png
