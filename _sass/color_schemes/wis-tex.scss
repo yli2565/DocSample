@@ -1,0 +1,26 @@
+@import "./color_schemes/light";
+
+$orange-000: #ffa500 !default; // Light orange
+$orange-100: #ff8c00 !default; // Dark orange
+$orange-200: #ff6347 !default; // Tomato (orange-red)
+$orange-300: #ff4500 !default; // OrangeRed
+
+$gradient-start: $orange-000 !default;
+$gradient-end: $red-300 !default;
+
+$color-scheme: light !default;
+$body-background-color: $white !default;
+$body-heading-color: $grey-dk-300 !default;
+$body-text-color: $grey-dk-100 !default;
+$link-color: $orange-100;
+$nav-child-link-color: $grey-dk-100 !default;
+$sidebar-color: mix($orange-000, $white, 5%);
+$base-button-color: #f7f7f7 !default;
+$btn-primary-color: $orange-100;
+$code-background-color: $grey-lt-100 !default;
+$feedback-color: darken($sidebar-color, 3%) !default;
+$table-background-color: $white !default;
+$search-background-color: $white !default;
+$search-result-preview-color: $grey-dk-000 !default;
+
+$body-font-family: "Helvetica", "Arial", sans-serif;
