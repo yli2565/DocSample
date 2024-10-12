@@ -7,9 +7,7 @@ nav_order: 15
 # BHuman
 
 
-ℹ️ This section will trace the control flow of BHuman Robot.
-
-
+ℹ️ This section will trace the flow of BHuman Robot Control code.
 
 Basic Concepts: Modules and Representations[¶](https://docs.b-human.de/coderelease2023/architecture/modules-representations/#modules-and-representations)
 
@@ -17,7 +15,7 @@ Basic Concepts: Modules and Representations[¶](https://docs.b-human.de/coderele
 
 The BHuman robot is controlled by six threads `Upper`, `Lower`, `Cognition`, `Motion`, `Audio`, and `Debug`
 
-![OfficalThreadsDescription.png](./OfficalThreadsDescription.png)
+![OfficialThreadsDescription.png](./OfficalThreadsDescription.png)
 
 - `Upper`, `Lower`: Image processing threads, they use the images received by it eyes to build robot’s perception of the world. It use a couple of neural network to extract different information form image.
 - `Cognition`: The high level control thread. Generally, it receive processed information from `Upper`, `Lower` thread and send high level control signal to `Motion` thread
@@ -45,4 +43,4 @@ The module graph can be zoomed in or out by using the *mouse wheel*, touch gest
 
 ![BHumanRobot Control Flow](./BHumanRobotControlFlow.svg)
 
-This diagram is construct by tracing the callstack, it’s also highly recommended to trace the execution of the code by yourself
+This diagram is construct by tracing the function call stack, it’s also highly recommended to trace the execution of the code by yourself

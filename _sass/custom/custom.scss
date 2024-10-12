@@ -1,0 +1,102 @@
+// Variables
+$max-width-xl: 1200px;
+$max-width-lg: 1000px;
+$max-width-md: 800px;
+$max-width-sm: 600px;
+
+$breakpoint-xl: 1400px;
+$breakpoint-lg: 1120px;
+$breakpoint-md: 740px;
+$breakpoint-sm: 500px;
+
+// Mixins
+@mixin respond-to($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Styles for full-size graph
+.responsive-graph {
+  width: 100%;
+  height: auto;
+  max-width: $max-width-xl;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @include respond-to($breakpoint-xl) {
+    max-width: $max-width-lg;
+  }
+
+  @include respond-to($breakpoint-lg) {
+    max-width: $max-width-md;
+  }
+
+  @include respond-to($breakpoint-md) {
+    max-width: $max-width-sm;
+  }
+
+  @include respond-to($breakpoint-sm) {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+// Styles for medium graph
+.responsive-graph-medium {
+  width: 100%;
+  height: auto;
+  max-width: 600px; // Maximum width for largest screens
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @include respond-to($breakpoint-lg) {
+    max-width: 500px;
+  }
+
+  @include respond-to($breakpoint-md) {
+    max-width: 400px;
+  }
+
+  @include respond-to($breakpoint-sm) {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
+// Styles for small graph
+.responsive-graph-small {
+  width: 100%;
+  height: auto;
+  max-width: 400px; // Maximum width for largest screens
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @include respond-to($breakpoint-lg) {
+    max-width: 350px;
+  }
+
+  @include respond-to($breakpoint-md) {
+    max-width: 300px;
+  }
+
+  @include respond-to($breakpoint-sm) {
+    max-width: 90%;
+    padding: 0 5px;
+  }
+}
