@@ -1,7 +1,18 @@
 ---
 layout: default
 title: "BadgerRLSystem"
+parent: "Code"
+nav_order: 0
 ---
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 # BadgerRLSystem
 
@@ -22,7 +33,7 @@ title: "BadgerRLSystem"
   - Xcode must be executed at least once to accept its license and to install its components.
 - CMake 3.26.3
   - Use a "macOS 10.13 or later" `.dmg` from [here](https://cmake.org/download/) or install a `cmake` that can be found in the `$PATH` (e. g. via Homebrew).
-  - If you want to install a more specific version or check all availableversions, please go [here](https://github.com/Kitware/CMake/releases).
+  - If you want to install a more specific version or check all available versions, please go [here](https://github.com/Kitware/CMake/releases).
 
 ### Setting up the Working Copy
 
@@ -33,7 +44,7 @@ title: "BadgerRLSystem"
 
 ### Running project on SimRobot or Nao Physical Robots
 
-💡 See B-Human [SimRobot](https://docs.b-human.de/master/simrobot/#simrobot) and [Nao Robot](../NAO%20Robots/NAO%20Robots.html) for more information
+💡 See B-Human [SimRobot](https://docs.b-human.de/master/simrobot/#simrobot) and [Nao Robot](../BHumanCodeRelease/Nao%20Overview/Nao%20OverView.html) for more information
 
 1. Creating Project Files / Compiling the Code
    - Run `Make/macOS/generate` and open the Xcode project `Make/macOS/B-Human.xcodeproj`. The schemes in the toolbar allow building the targets mentioned in [this section](https://docs.b-human.de/master/getting-started/initial-setup/#targets-and-configurations) in different configurations.
@@ -42,31 +53,31 @@ title: "BadgerRLSystem"
 3. Select the environment you want to deploy your project
    - `Nao` mode will deploy the code in physical robot, you need to turn on a robot and connect to Lab (1351 CS building) LAN `SPL_WISC`
    - `SimRobot` will open up simulation environment. See [here](https://docs.b-human.de/master/getting-started/initial-setup/#targets-and-configurations) to learn about `Debug/Develop/Release`
-     ![image.png](./image.png)
+     ![image.png](./mac-compile-and-run.png)
 4. Click the start button to launch an instance, you will need to wait for building complete
    - **SimRobot**:
-     Refer [here](https://docs.b-human.de/master/simrobot/#simrobot) and [SimRobot Code Overview](../SimRobot/SimRobot.html) to learn more about SimRobot
+     Refer [here](https://docs.b-human.de/master/simrobot/#simrobot) and [SimRobot Code Overview](../BHumanCodeRelease/SimRobot%20Overview/SimRobot%20Overview.html) to learn more about SimRobot
      - You need to select a scene file `.ros2` to open a pre-defined robot soccer. A good first scene to try is `OneTeamFast.ros2`. Feel free to refer to any `.ros2` and `.con` under `Config/Scenes/` or [here](https://docs.b-human.de/master/simrobot/#scene-description-files) if you want to build your own scene.
-       ![image.png](./image%201.png)
+       ![image.png](./mac-select-scene.png)
      - After open a scene, double click `Console` to open a console where you can write command, double click `RoboCup` to display the rendered environment.
        - Refer [here](https://docs.b-human.de/master/simrobot/#console-commands) to learn more about console command
-         ![image.png](./image%202.png)
+         ![image.png](./mac-SimRobot-window.png)
      - To start the simulation, enter the following commands in the console:
        1. To instruct the robots to prepare for a kickoff, type `gc ready` . The robots should walk to their kickoff positions.
        2. Once the robots have reached their kickoff positions, type `gc set` to tell the robots to stop moving and get ready for kickoff.
        3. Type `gc playing` to start a countdown after which the game will begin.
        - Entering the commands in the order above is the official way to start the game. If you don’t care about this, just type `gc playing`.
-   - **Nao Deployment: (This section will go through initial deployment, for how to handle NAO robots and further instruction, refer “How to deploy” under** [NAO Robots](../NAO%20Robots/NAO%20Robots.html)**)**
+   - **Nao Deployment: (This section will go through initial deployment, for how to handle NAO robots and further instruction, refer “How to deploy” under** [NAO Robots](/docs/NAO%20Robots/NAO%20Robots.html)**)**
      - You need to go to the Lab (1351 CS building) where Nao Robots located, turn on robot(s), connect to the Lab LAN `SPL_WISC`.
      - If an robot is turn on, and your computer connect `SPL_WISC`, the line relate with the robot will have active data (the image below showing no active robots, either because not turning on robot or connect to `SPL_WISC`).
      - You can config setting for deployment in the right sidebar. Please Note:
-       - **❗️REMEMBER** to select `SPL_WISC` in Wireless profile before click `Deploy`. Otherwise, you will need to physically connect to the robot with a cable to redeploy. See “NAO Connection and File System” section under [NAO Robots](../NAO%20Robots/NAO%20Robots.html) for instruction with cable connection.
+       - **❗️REMEMBER** to select `SPL_WISC` in Wireless profile before click `Deploy`. Otherwise, you will need to physically connect to the robot with a cable to redeploy. See “NAO Connection and File System” section under [NAO Robots](/docs/NAO%20Robots/NAO%20Robots.html) for instruction with cable connection.
        - **❗️**In Xcode, when clicking deploy, all active robot will be deployed with the same file. If you want to deploy different files to different robot, either turn off one and deploy another, or use a linux machine to deploy with command line.
-         ![image.png](./image%203.png)
+         ![mac-DeployDialogue-window.png](./mac-DeployDialogue-window.png)
 
 ## Linux
 
-💡 It is highly recommend to use the Lab Linux machine since it is already have environment setup, see [here](../Lab%20Server/Lab%20Server.html) for instruction of Lab Machine
+💡 It is highly recommend to use the Lab Linux machine since it is already have environment setup, see [here](/docs/Lab%20Server/Lab%20Server.html) for instruction of Lab Machine
 
 ### Required Dependency
 
@@ -114,3 +125,4 @@ title: "BadgerRLSystem"
 💡 Please refer to [B-Human documentation](https://docs.b-human.de/master/getting-started/initial-setup/) about initial setup on Windows
 
 **TODO**
+

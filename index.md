@@ -1,33 +1,12 @@
 ---
 title: Home
 layout: home
+nav_order: -1
 ---
 
-# Home
+In progress
 
-[Introduction](docs/Introduction/Introduction.html)
-
-## Codebase: Setup & Overview
-
-[AbstractSim](docs/AbstractSim/AbstractSim.html)
-
-[BadgerRLSystem](docs/BadgerRLSystem/BadgerRLSystem.html)
-
-[SimRobot](docs/SimRobot/SimRobot.html)
-
-[BHuman](docs/BHuman/BHuman.html)
-
-[NAO Robots](docs/NAO%20Robots/NAO%20Robots.html)
-
-## Projects
-
-[RoboCup 2025 Tasks List](docs/RoboCup%202025%20Tasks.html)
-
-## Misc
-
-[Lab Server](docs/Lab%20Server/Lab%20Server.html)
-
-[RoboCup Rules](https://spl.robocup.org/wp-content/uploads/SPL-Rules-2023.pdf)
+Since we have sidebar navigation, links of each page is not necessary. We can put some information of this organization here
 
 
 [Just the Docs]: https://just-the-docs.github.io/just-the-docs/

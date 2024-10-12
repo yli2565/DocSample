@@ -1,7 +1,18 @@
 ---
 layout: default
 title: "AbstractSim"
+parent: "Code"
+nav_order: 5
 ---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # AbstractSim
 
 AbstractSim is a low-fidelity, 2D soccer simulation developed by the BadgerRL lab. It is written in Python and uses [StableBaselines3](https://stable-baselines3.readthedocs.io/en/master/) and the PettingZoo [Parallel API](https://pettingzoo.farama.org/api/parallel/) for RL training. 

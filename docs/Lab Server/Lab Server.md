@@ -1,7 +1,16 @@
 ---
 layout: default
 title: "Lab Server"
+nav_order: 100
 ---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 # Lab Server
 
@@ -154,9 +163,9 @@ A tmux pesudo terminal will take control after running the command
   [Trial2 (1).mp4](<./Trial2_(1).mp4>)
 - Linux
   Your home folder on remote machine will appear on the side bar of nautilus (the file browser)
-  ![Screenshot from 2024-10-01 01-55-56.png](./Screenshot_from_2024-10-01_01-55-56.png)
+  ![linux-nautilus-sidebar](./linux-nautilus-sidebar.png)
   Or you can find it under `Other Locations -> Networks`
-  ![Screenshot from 2024-10-01 01-55-45.png](./Screenshot_from_2024-10-01_01-55-45.png)
+  ![linux-other-locations](./linux-other-locations.png)
 
 ### Connect GUI (VNC)
 
@@ -283,38 +292,42 @@ Updated: Oct 6 2024
 
    SSH: **BE AS FAST AS YOU CAN WHEN LOGINING IN** (Password + Duo)
 
-# Net structure
+## Net structure
 
 <a id="wisc-net"></a>
 
-## 🏛 WISC Net
+### 🏛 WISC Net
 
 [WISC VPN](https://it.wisc.edu/services/wiscvpn/) brings you here
 
 <a id="cs-net"></a>
 
-### 🌐 CS Department Net
+#### 🌐 CS Department Net
 
 [CS Department VPN](https://csl.cs.wisc.edu/docs/csl/2019-11-14-globalprotect-department-vpn/) bring you here (Only professor have it)
 
 - **CS Lab machines**
+  
   You can login to these machines at [`best-linux.cs.wisc.edu`](http://best-linux.cs.wisc.edu) from [WISC Net](#wisc-net) [**through ssh**](#ssh-command-target) with you [**CS account and password**](https://apps.cs.wisc.edu/accountapp/). It’s the only way to bring you into [CS Department Net](#cs-net).
+
   <a id="ssh-command-target"></a>ssh target: `<NetID>@best-linux.cs.wisc.edu`
 - **badgerrl** at `128.105.102.51`
+  
   Your account name should be:
   <your_first_name(all lower case)><year_you_join_the_lab>
   e.g. firstname2024 for name: “FirstName LastName”
   - **SPL_WISC (Robot Lab Net)**
+  
     Nao Robots `nao@10.0.52.<robot number>`
 - **badgerrl2** at `128.105.102.54`
 
-# Set up
+# Setup OS and environment
 
-🔑 This section is for administors only
+🔑 This section is for administers only
 
 ## Setup Script
 
-[https://github.com/Badger-RL/LabServerScripts/blob/main/ServerScripts/setup.sh](https://github.com/Badger-RL/LabServerScripts/blob/main/ServerScripts/setup.sh)
+[setup.sh](https://github.com/Badger-RL/LabServerScripts/blob/main/ServerScripts/setup.sh)
 
 Simply runs it and it will prompt for each change it make. If @Yuhao Li is still in the Lab, please contact him
 

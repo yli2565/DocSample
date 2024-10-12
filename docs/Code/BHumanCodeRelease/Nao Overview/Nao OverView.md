@@ -1,6 +1,8 @@
 ---
 layout: default
-title: "BHuman"
+title: "Nao Overview"
+parent: BHumanCodeRelease
+nav_order: 15
 ---
 # BHuman
 
@@ -15,7 +17,7 @@ Basic Concepts: Modules and Representations[¶](https://docs.b-human.de/coderele
 
 The BHuman robot is controlled by six threads `Upper`, `Lower`, `Cognition`, `Motion`, `Audio`, and `Debug`
 
-![image.png](./image.png)
+![OfficalThreadsDescription.png](./OfficalThreadsDescription.png)
 
 - `Upper`, `Lower`: Image processing threads, they use the images received by it eyes to build robot’s perception of the world. It use a couple of neural network to extract different information form image.
 - `Cognition`: The high level control thread. Generally, it receive processed information from `Upper`, `Lower` thread and send high level control signal to `Motion` thread
@@ -25,7 +27,7 @@ The BHuman robot is controlled by six threads `Upper`, `Lower`, `Cognition`,�
 
 Information flow:
 
-![Cognition.drawio.svg](./Cognition.drawio.svg)
+![ThreadsRelation.svg](./ThreadsRelation.svg)
 
 ## Cognition Thread
 

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Introduction"
+nav_order: 0
 ---
 # Introduction
 
@@ -8,7 +9,7 @@ title: "Introduction"
 💡 Questions will be answered in this page:
 
 1. What is RoboCup? 
-2. What is B-Human and its relation to our codebase ([BadgerRLSystem](/docs/BadgerRLSystem/BadgerRLSystem.html))?
+2. What is B-Human and its relation to our codebase ([BadgerRLSystem](/docs/Code/BadgerRLSystem/BadgerRLSystem.html))?
 
 
 # RoboCup

@@ -1,7 +1,17 @@
 ---
 layout: default
 title: "NAO Robots"
+nav_order: 5
 ---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # NAO Robots
 
 - Basic Concepts: Handling the NAO[¶](https://docs.b-human.de/master/handling-the-nao/#handling-the-nao)
