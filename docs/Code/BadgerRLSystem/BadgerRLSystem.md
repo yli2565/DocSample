@@ -16,7 +16,8 @@ nav_order: 0
 
 # BadgerRLSystem
 
-💡 This page will go through the environment setup for `BadgerRLSystem` for Mac, Linux, and Windows, and how to deploy the project on SimRobot and NAO Robot.
+{:.hint}
+This page will go through the environment setup for `BadgerRLSystem` for Mac, Linux, and Windows, and how to deploy the project on SimRobot and NAO Robot.
 
 # Installation
 
@@ -44,7 +45,8 @@ nav_order: 0
 
 ### Running project on SimRobot or Nao Physical Robots
 
-💡 See B-Human [SimRobot](https://docs.b-human.de/master/simrobot/#simrobot) and [Nao Robot](../BHumanCodeRelease/Nao%20Overview/Nao%20OverView.html) for more information
+{:.hint}
+See B-Human [SimRobot](https://docs.b-human.de/master/simrobot/#simrobot) and [Nao Robot](../BHumanCodeRelease/Nao%20Overview/Nao%20OverView.html) for more information
 
 1. Creating Project Files / Compiling the Code
    - Run `Make/macOS/generate` and open the Xcode project `Make/macOS/B-Human.xcodeproj`. The schemes in the toolbar allow building the targets mentioned in [this section](https://docs.b-human.de/master/getting-started/initial-setup/#targets-and-configurations) in different configurations.
@@ -53,15 +55,15 @@ nav_order: 0
 3. Select the environment you want to deploy your project
    - `Nao` mode will deploy the code in physical robot, you need to turn on a robot and connect to Lab (1351 CS building) LAN `SPL_WISC`
    - `SimRobot` will open up simulation environment. See [here](https://docs.b-human.de/master/getting-started/initial-setup/#targets-and-configurations) to learn about `Debug/Develop/Release`
-     ![image.png](./mac-compile-and-run.png)
+     ![image.png](./mac-compile-and-run.png){: .responsive-graph-medium}
 4. Click the start button to launch an instance, you will need to wait for building complete
    - **SimRobot**:
      Refer [here](https://docs.b-human.de/master/simrobot/#simrobot) and [SimRobot Code Overview](../BHumanCodeRelease/SimRobot%20Overview/SimRobot%20Overview.html) to learn more about SimRobot
      - You need to select a scene file `.ros2` to open a pre-defined robot soccer. A good first scene to try is `OneTeamFast.ros2`. Feel free to refer to any `.ros2` and `.con` under `Config/Scenes/` or [here](https://docs.b-human.de/master/simrobot/#scene-description-files) if you want to build your own scene.
-       ![image.png](./mac-select-scene.png)
+       ![image.png](./mac-select-scene.png){: .responsive-graph-medium}
      - After open a scene, double click `Console` to open a console where you can write command, double click `RoboCup` to display the rendered environment.
        - Refer [here](https://docs.b-human.de/master/simrobot/#console-commands) to learn more about console command
-         ![image.png](./mac-SimRobot-window.png)
+         ![image.png](./mac-SimRobot-window.png){: .responsive-graph-medium}
      - To start the simulation, enter the following commands in the console:
        1. To instruct the robots to prepare for a kickoff, type `gc ready` . The robots should walk to their kickoff positions.
        2. Once the robots have reached their kickoff positions, type `gc set` to tell the robots to stop moving and get ready for kickoff.
@@ -73,11 +75,12 @@ nav_order: 0
      - You can config setting for deployment in the right sidebar. Please Note:
        - **❗️REMEMBER** to select `SPL_WISC` in Wireless profile before click `Deploy`. Otherwise, you will need to physically connect to the robot with a cable to redeploy. See “NAO Connection and File System” section under [NAO Robots](/docs/NAO%20Robots/NAO%20Robots.html) for instruction with cable connection.
        - **❗️**In Xcode, when clicking deploy, all active robot will be deployed with the same file. If you want to deploy different files to different robot, either turn off one and deploy another, or use a linux machine to deploy with command line.
-         ![mac-DeployDialogue-window.png](./mac-DeployDialogue-window.png)
+         ![mac-DeployDialogue-window.png](./mac-DeployDialogue-window.png){: .responsive-graph-medium}
 
 ## Linux
 
-💡 It is highly recommend to use the Lab Linux machine since it is already have environment setup, see [here](/docs/Lab%20Server/Lab%20Server.html) for instruction of Lab Machine
+{:.hint}
+It is highly recommend to use the Lab Linux machine since it is already have environment setup, see [here](/docs/Lab%20Server/Lab%20Server.html) for instruction of Lab Machine
 
 ### Required Dependency
 
@@ -93,7 +96,8 @@ nav_order: 0
 
 ### Running project on SimRobot or Nao Physical Robots
 
-💡 Check [SimRobot](https://docs.b-human.de/master/simrobot/#simrobot) and [Nao Robots](../NAO%20Robots/NAO%20Robots.html) for more information
+{:.hint}
+Check [SimRobot](https://docs.b-human.de/master/simrobot/#simrobot) and [Nao Robots](../NAO%20Robots/NAO%20Robots.html) for more information
 
 1. Compile and deploy on SimRobot
    1. Run `Make/Linux/generate` to generate CMake caches.
@@ -122,7 +126,7 @@ nav_order: 0
 
 ## Windows
 
-💡 Please refer to [B-Human documentation](https://docs.b-human.de/master/getting-started/initial-setup/) about initial setup on Windows
+{:.hint}
+Please refer to [B-Human documentation](https://docs.b-human.de/master/getting-started/initial-setup/) about initial setup on Windows
 
 **TODO**
-

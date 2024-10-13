@@ -5,8 +5,9 @@ title: "RoboCup 2025 Tasks List"
 
 # RoboCup 2025 Tasks List
 
-💡 This page gives a brief overview of the ongoing project and directions for RoboCup 2025.
-
+{:.hint}
+This page gives a brief overview of the ongoing project and directions for RoboCup 2025.
+<br>
 For more information, please check the doc [**Toward RoboCup 2025**](https://docs.google.com/document/d/1a_Rvacxm9Vnnckz90d_8mO7Fn6WeP1KawXRMKFru5fg/edit) and [**Gitub project**](https://github.com/orgs/Badger-RL/projects/1).
 
 # Current Ongoing Fall Goals:

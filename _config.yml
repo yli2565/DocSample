@@ -16,6 +16,26 @@ nav_external_links:
 
 color_scheme: wis-tex
 
+callouts:
+  hint:
+    title: 💡 Hint
+    color: grey-md
+    opacity: 0.25
+
+  info:
+    title: ℹ️ Info
+    color: blue
+    opacity: 0.2
+  
+  attention:
+    title: ⚠️ Attention
+    color: yellow
+    opacity: 0.2
+
+  caution:
+    title: ❗️ Caution
+    color: red
+    opacity: 0.15
+
 logo: /assets/images/WisTex-United-Logo-250x250.png
 favicon_ico: /assets/images/WisTex-United-Logo-220x220.png
-

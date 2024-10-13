@@ -6,8 +6,8 @@ nav_order: 15
 ---
 # BHuman
 
-
-ℹ️ This section will trace the flow of BHuman Robot Control code.
+{:.info}
+This section will trace the flow of BHuman Robot Control code.
 
 Basic Concepts: Modules and Representations[¶](https://docs.b-human.de/coderelease2023/architecture/modules-representations/#modules-and-representations)
 

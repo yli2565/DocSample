@@ -59,7 +59,8 @@ nav_order: 100
   brew install gromgit/fuse/sshfs
   ```
 
-  ⚠️ For OSX (MacOS) Users
+  {: .attention }
+  For OSX (MacOS) Users<br>
   Apple tighten their system plugin restriction in their recent OSX release, you can either
 
   1. Ignore this feature
@@ -77,17 +78,17 @@ nav_order: 100
        5. Type in your administrator password and click Continue.
        6. Click Utilities in the menu bar and choose Startup Security Utility.
 
-          ![image.png](./image.png){: .responsive-graph-medium}
+          ![macos-startup-security-utility.png](./macos-startup-security-utility.png){: .responsive-graph-medium}
 
        7. Select your boot disk and click Security Policy.
 
-          ![image.png](./image%201.png){: .responsive-graph-medium}
+          ![macos-startup-security-policy.png](./macos-startup-security-policy.png){: .responsive-graph-medium}
 
        8. Select the button next to Reduced Security.
 
           You can only select the first option (Allow user management of kernel extensions from identified developers)
 
-          ![image.png](./image%202.png){: .responsive-graph-medium}
+          ![macos-startup-reduced-security.png](./macos-startup-reduced-security.png){: .responsive-graph-medium}
 
        9. Select the box next to Allow user management of kernel extensions from identified developers.
        10. Click OK.
@@ -139,7 +140,7 @@ General case
 - `-d`: Duo device
 - **First Time login with pre-existing key**
 
-  [Write id_rsa key to server video.mp4](./Trial1.mp4)
+  [Write id_rsa key to server video.mp4](./write-id-rsa-key-to-server.mp4)
 
   - `-k`: name of the existing key
   - `-w`: write key to server. just like ssh-copy-id
@@ -150,7 +151,7 @@ General case
   - `--key-password`: the password used to encrypt the key (optional)
   - `-w`: write key to server. Not visible in the video but automatically enabled when you create a new key
 
-  [Generate rllab_key and write to server video.mp4](./Trial.mp4)
+  [Generate rllab_key and write to server video.mp4](./generate-rllab-key-and-write-to-server.mp4)
 
   You also need to specify the key and password in all login afterwards
 
@@ -158,7 +159,7 @@ General case
 
 A tmux pseudo terminal will take control after running the command
 
-![ssh success tmux terminal.png](./Screenshot_from_2024-10-01_14-20-46.png){: .responsive-graph-medium}
+![ssh success tmux terminal.png](./ssh-success-tmux-terminal.png){: .responsive-graph-medium}
 
 ### Connect File System
 
@@ -174,7 +175,7 @@ A tmux pseudo terminal will take control after running the command
   A `XXXMountPoint` folder will appear under you home folder, your **home folder** on remote machine will be mount there
   As the linux symbolic link doesn’t work with this kind of mount, the **Shared** folder is mounted separately
 
-  [Successful mount video](<./Trial2_(1).mp4>)
+  [Successful mount video](./successful-mount-osx.mp4)
 
 - Linux
   Your home folder on remote machine will appear on the side bar of nautilus (the file browser)
@@ -187,7 +188,8 @@ A tmux pseudo terminal will take control after running the command
 
 ### Connect GUI (VNC)
 
-⚠️ VNC is intended to be used exclusively with the physical screen
+{: .attention }
+VNC is intended to be used exclusively with the physical screen
 
 There would be a conflict between physical screen login in and VNC server login in.
 
@@ -196,32 +198,35 @@ Before starting a vncserver, ensure you logout from the physical screen
 The following sample is on Linux OS
 
 1.  First, [ssh](..md) into your remote account
-    <br>
-    ![Screenshot from 2024-10-01 21-39-44.png](./9bec742e-46e8-4e3c-a292-eb587975b51e.png){: .responsive-graph-medium}
-    ![Screenshot from 2024-10-01 14-20-46.png](./5d565d6a-a602-4dbd-8916-d4cff89c4b96.png){: .responsive-graph-medium}
+    
+    ![ssh-login-command.png](./ssh-login-command.png){: .responsive-graph-medium}
+    ![ssh-success-tmux-terminal-2.png](./ssh-success-tmux-terminal-2.png){: .responsive-graph-medium}
 2.  Run `Shared/start_vnc_server.sh`
-    <br>
-    ![Screenshot from 2024-10-01 21-52-49.png](./Screenshot_from_2024-10-01_21-52-49.png){: .responsive-graph-medium}
+    
+    ![start-vnc-server.png](./start-vnc-server.png){: .responsive-graph-medium}
 3.  Watch the port the server is running on
     In the previous example it is **5960**
 4.  Exit the remote ssh shell
     <a id="vnc-initial-password"></a>
-    ⚠️ The first time you run the script, it will show you the default VNC password (should be badgerrl) and the way to change it. Please remember, VNC password is an **independent** password
-    <br>
-    ![Screenshot from 2024-10-01 21-54-46.png](./Screenshot_from_2024-10-01_21-54-46.png){: .responsive-graph-medium}
-    ![Screenshot from 2024-10-01 21-54-51.png](./02c064a4-4045-49e8-a0ab-49426e51ab9b.png){: .responsive-graph-medium}
+
+    {: .attention }
+    The first time you run the script, it will show you the default VNC password (should be badgerrl) and the way to change it. Please remember, VNC password is an **independent** password
+
+    ![vnc-initial-password-1.png](./vnc-initial-password-1.png){: .responsive-graph-medium}
+    ![vnc-initial-password-2.png](./vnc-initial-password-2.png){: .responsive-graph-medium}
+
 5.  Create a new ssh connection to forward the port, both `-t` and `-m` option should work
     <br>
 
     1.  **`-t`**
         <br>
-        ![Screenshot from 2024-10-01 21-57-51.png](./e990ba51-8e72-47eb-8e60-4c7b8e54663d.png){: .responsive-graph-medium}
+        ![ssh-tunnel-mode-connection.png](./ssh-tunnel-mode-connection.png){: .responsive-graph-medium}
 
             After connection is established, **keep the terminal open**
 
     2.  **`-m`**
         <br>
-        ![Screenshot from 2024-10-01 22-00-44.png](./82c55e62-62f3-4cb4-910a-16d38fc0f374.png){: .responsive-graph-medium}
+        ![sftp-mount-mode-connection.png](./sftp-mount-mode-connection.png){: .responsive-graph-medium}
 
         You can safely close the terminal
 
@@ -233,7 +238,7 @@ The following sample is on Linux OS
       netstat -tuln | grep <port_number (e.g.5960)>
       ```
 
-      ![Screenshot from 2024-10-01 22-05-27.png](./762dc21b-e45a-4702-a5c2-ec7abadcff3f.png){: .responsive-graph-medium}
+      ![check-port-connection-status.png](./check-port-connection-status.png){: .responsive-graph-medium}
 
     - OSX
       ```bash
@@ -244,62 +249,71 @@ The following sample is on Linux OS
 
     - TigerVNC Client (All Platform)
 
-      ![Screenshot from 2024-10-01 22-06-55.png](./Screenshot_from_2024-10-01_22-06-55.png){: .responsive-graph-medium}
+      ![tigervnc-client-setup-1.png](./tigervnc-client-setup-1.png){: .responsive-graph-small}
 
-      ![Screenshot from 2024-10-01 22-07-06.png](./Screenshot_from_2024-10-01_22-07-06.png){: .responsive-graph-medium}
+      ![tigervnc-client-setup-2.png](./tigervnc-client-setup-2.png){: .responsive-graph-small}
 
       The password is the [**VNC password**](#vnc-initial-password) you see / you set on the lab server
 
-      ![Screenshot from 2024-10-01 22-07-27.png](./Screenshot_from_2024-10-01_22-07-27.png){: .responsive-graph-medium}
+      ![tigervnc-client-setup-3.png](./tigervnc-client-setup-3.png){: .responsive-graph-medium}
 
     - Remmina (Linux/WSL2)
+      <br>
+      You can install the client on your machine  
       Run `remmina` on command line
 
-      ![Screenshot from 2024-10-01 22-27-36.png](./Screenshot_from_2024-10-01_22-27-36.png){: .responsive-graph-medium}
-      ![Screenshot from 2024-10-01 22-28-42.png](./Screenshot_from_2024-10-01_22-28-42.png){: .responsive-graph-medium}
+      ![remmina-client-setup-1.png](./remmina-client-setup-1.png){: .responsive-graph-medium}
+      ![remmina-client-setup-2.png](./remmina-client-setup-2.png){: .responsive-graph-medium}
 
       Afterwards you can connect with one click
 
 ### VNC Client recommendation
 
 - **TigerVNC Client**
-  Minimum Lightweight VNC Client, no need to install
-  ⚠️ Latest version (>1.12) might report:
 
-  > An unexpected error occurred when communicating with the server:
+  Minimum Lightweight VNC Client, no need to install
+
+  {: .attention }
+
+  > Latest version (>1.12) might report:
   >
-  > No matching security types
+  > > An unexpected error occurred when communicating with the server: <br>
+  > > No matching security types <br>
+  > > Attempt to reconnect?
   >
-  > Attempt to reconnect?
   > Solution: use stable version
 
   [TigerVNC - Browse /stable/1.12.0 at SourceForge.net](https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/)
 
 - **Remmina**
-  Powerful VNC/RDP/SFTP Client preinstalled in most Linux distro
-  Need [manual installation](#wsl2-dependencies) on WSL
-
-  ![Screenshot from 2024-10-01 22-27-36.png](./Screenshot_from_2024-10-01_22-27-36%201.png){: .responsive-graph-medium}
-
-  ![Screenshot from 2024-10-01 22-28-42.png](./Screenshot_from_2024-10-01_22-28-42%201.png){: .responsive-graph-medium}
+  <br>
+  Powerful VNC/RDP/SFTP Client preinstalled in most Linux distro<br>
+  Need [manual installation](#wsl2-dependencies) on WSL2
 
 ### Sample Usage
 
 - **OSX**
-  The video is too large, view it in [this link](https://drive.google.com/file/d/1qO7QZ3zcXnnJEN6g3RvYCnZ-Me8rR1AK/view?usp=drive_link)
+
+  [OSX Demo video](./OSX-demo.mp4)
+
+  If the video is not working, please try [google drive](https://drive.google.com/file/d/1qO7QZ3zcXnnJEN6g3RvYCnZ-Me8rR1AK/view)
 
 <a id="wsl2-vedio"> </a>
 
 - **WSL2**
 
-  [WSL2 Demo video.mp4](https://drive.google.com/file/d/1UQOcTw-M_0nQEF_VPGwxBVyhZ8tOG4ng/view?usp=drive_link)
+  [WSL2 Demo video](./WSL2-demo.mp4)
+
+  If the video is not working, please try [google drive](https://drive.google.com/file/d/1UQOcTw-M_0nQEF_VPGwxBVyhZ8tOG4ng/view)
 
 - **Linux**
+
   Linux Connection is the same as [**WSL2**](#wsl2-vedio)
 
 ### Connect With VSCode
 
-⚠️ VScode is nice, but we met many problems when trying to connect to lab server though vscode
+{: .attention }
+VScode is nice, but we met many problems when trying to connect to lab server though vscode
 
 Updated: Oct 6 2024
 
@@ -311,7 +325,7 @@ Updated: Oct 6 2024
 
    - Use Tunneling:
 
-     [Windows VScode tunnel connection video.mp4](./Kazam_screencast_00036.mp4)
+     [Windows VScode tunnel connection video.mp4](./windows-vscode-tunnel-connection.mp4)
 
 2. MacOS (OSX):
 

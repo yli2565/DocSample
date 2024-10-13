@@ -16,3 +16,6 @@ vendor/
 
 # Ignore the lock
 Gemfile.lock
+
+# Ignore tool scripts
+tools/

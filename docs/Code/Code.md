@@ -7,7 +7,8 @@ has_toc: false
 
 # Repositories
 
-💡 This page gives a one sentence description of active repositories
+{:.info}
+This page gives a one sentence description of active repositories
 
 - [AbstractSim](./AbstractSim/AbstractSim.html) AbstractSim is a **low-fidelity**, **fast**, 2D simulator for training customized policies. 
 - [BHumanCodeRelease](https://github.com/bhuman/BHumanCodeRelease) A **robot control** + **game simulation** codebase for RobotCupSPL.

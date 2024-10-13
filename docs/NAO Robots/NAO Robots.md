@@ -26,8 +26,8 @@ nav_order: 5
 
 # NAO Robot Overview
 
-
-💡 The overview follows the [Handling the NAO](https://docs.b-human.de/master/handling-the-nao/), with minor revision.
+{:.hint}
+The overview follows the [Handling the NAO](https://docs.b-human.de/master/handling-the-nao/), with minor revision.
 
 
 
@@ -35,7 +35,7 @@ nav_order: 5
 
 The robot's structure is shown below. Note that the camera is not in the eyes but in the red boxes circled.
 
-![image.png](./image.png)
+![image.png](./image.png){: .responsive-graph-medium}
 
 ## Handling Robot
 
@@ -43,7 +43,7 @@ The robot's structure is shown below. Note that the camera is not in the eyes bu
 
 - Before turn on the robot, make sure its position is unstiff, which is like sitting, see image below. Don’t change its position before turning on.
     
-    ![901727991931_.pic_hd.jpg](./48dc8e58-bc5c-4841-9ab2-d1908720b308.png)
+    ![901727991931_.pic_hd.jpg](./48dc8e58-bc5c-4841-9ab2-d1908720b308.png){: .responsive-graph-small}
     
 - The robot can be turned on with a short press on the chest button. You will see white light flashing on his chest button for ~20 seconds.
     - It is very important not to move the robot while it is booting up, because its software is calibrating the inertia measurement unit (IMU) during this time. Motion will result in wrong calibration offsets.
@@ -51,7 +51,7 @@ The robot's structure is shown below. Note that the camera is not in the eyes bu
     - You still shouldn’t move it at this point. If offsets are detected, a siren sound will be played. In such a case the robot needs to be turn off and rebooted again.
     - At this point, you can see its status in Deploydialog as active, meaning you can deploy your file in the robot(s).
         
-        ![image.png](./image%201.png)
+        ![image.png](./image%201.png){: .responsive-graph-medium}
         
 - Now you can short press the chest button again, chest button turning green meaning you are pressing it correctly. The robot will stand up stiff after you press it, and you’ll see its foot light also turns green.
     - At this point, you can move the robot. When lift it up, it will say “High”, meaning it detect itself left the ground.
@@ -64,7 +64,7 @@ The robot's structure is shown below. Note that the camera is not in the eyes bu
 
 When turned on, the robot can switch between different states as shown in the following image (Source: RoboCup SPL Rules 2023):
 
-![image.png](./image%202.png)
+![image.png](./image%202.png){: .responsive-graph-medium}
 
 - From every state you can switch into the `Unstiff` state by touching all three head buttons for at least one second (blue arrow).
 - You can switch from `Unstiff` to `Initial` to `Penalize` to `Playing` and back to `Penalize` with a press of the chest button (gray arrows).
@@ -77,23 +77,22 @@ When turned on, the robot can switch between different states as shown in the fo
 - Don’t press any button when robot is moving.
 - You should make sure the robot is unstiff (sit) before turning it on.
 - Be careful when moving robot, they may suddenly move and hurt you.
-- Put the robot in a soft ground, e.g. sccor field. Don’t put it on high place or uneven/hard ground, and keep them far from stiff things.
+- Put the robot in a soft ground, e.g. soccer field. Don’t put it on high place or uneven/hard ground, and keep them far from stiff things.
 - When not using robot (Inactive), get it charged and stored in one of the following two position:
     
+    {:.hint}
+    Note the second position should be stored in a way that the robot is unstiffed via the head buttons or turning off.
     
-    💡 Note the second position should be stored in a way that the robot is unstiffed via the head buttons or turning off.
     
+    ![911727991945_.pic.jpg](./7dbfbde0-6e3b-40e8-a869-0aff76cfff43.png){: .responsive-graph-small}
     
-    
-    ![911727991945_.pic.jpg](./7dbfbde0-6e3b-40e8-a869-0aff76cfff43.png)
-    
-    ![901727991931_.pic_hd.jpg](./48dc8e58-bc5c-4841-9ab2-d1908720b308.png)
+    ![901727991931_.pic_hd.jpg](./48dc8e58-bc5c-4841-9ab2-d1908720b308.png){: .responsive-graph-small}
     
 
 # Deployment
 
-
-💡 Please first go through Running project on Nao Physical Robots part 4 under [Environment Setup (Mac, Linux, Windows)](https://www.notion.so/Environment-Setup-Mac-Linux-Windows-10da6491b30a80a884a7db93abfb479b?pvs=21) to learn initial deployment
+{:.hint}
+Please first go through Running project on Nao Physical Robots part 4 under [Environment Setup (Mac, Linux, Windows)](https://www.notion.so/Environment-Setup-Mac-Linux-Windows-10da6491b30a80a884a7db93abfb479b?pvs=21) to learn initial deployment
 
 
 
@@ -102,7 +101,7 @@ When turned on, the robot can switch between different states as shown in the fo
     - check deployment instructions in [Environment Setup (Mac, Linux, Windows)](https://www.notion.so/Environment-Setup-Mac-Linux-Windows-10da6491b30a80a884a7db93abfb479b?pvs=21)
     - In MacOS Xcode, you will see that the active robot has active data in Deploydialog (the image below shows only robot5 is active), but you can only deploy robots simultaneously. One solution is to turn on one for deployment while turning off others.
         
-        ![image.png](./image%201.png)
+        ![image.png](./image%201.png){: .responsive-graph-medium}
         
     - In Linux, you can use command line to deploy robot separately or simultaneously.
 3. When start deploy, you will see the robot(s) unstiff, stop flashing chest button light.
@@ -121,7 +120,7 @@ When turned on, the robot can switch between different states as shown in the fo
 
 - First, you will see this page below when opening up GameController. Generally, you only need to select the competition type and teams (note you assign the robot a team during deployment). Then click “Start”.
     
-    ![image.png](./1b6f3e5f-2984-4b27-8929-e4498300d4fa.png)
+    ![image.png](./1b6f3e5f-2984-4b27-8929-e4498300d4fa.png){: .responsive-graph-medium}
     
 - After start the game, you will see another page as shown below.
     - The red dot means this robot is inactive (either not turn on or assign to that team).
@@ -132,11 +131,11 @@ When turned on, the robot can switch between different states as shown in the fo
     
     
     
-    ![image.png](./image%203.png)
+    ![image.png](./image%203.png){: .responsive-graph-medium}
     
 - You can click “Ready” at the up-middle bar, then you will see “Set” and “Playing” in the same bar, you can also click “Ready” at the bottom bar. They will perform the same as in SimRobot using `gc [ready/set/playing]`.
     
-    ![image.png](./image%204.png)
+    ![image.png](./image%204.png){: .responsive-graph-medium}
     
 - Click “Finish” to stop a round.
 
@@ -161,11 +160,11 @@ When you accidentally deploy with different Wireless profile, e.g. select `SPL_D
 - Configure your network (works for mac, not sure if workable for Linux and Windows)
     1. add a service to your networking settings
         
-        ![image.png](./image%205.png)
+        ![image.png](./image%205.png){: .responsive-graph-small}
         
     2. Config the new server same as shown below
         
-        ![image.png](./image%206.png)
+        ![image.png](./image%206.png){: .responsive-graph-medium}
         
     3. It should display connected (green dot) when you are connecting robot with a ethernet cable.
 - use `ssh nao@192.168.[<team number>].[<robot number>]` when you are connecting the robot through a ethernet cable.

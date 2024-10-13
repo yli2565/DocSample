@@ -3,18 +3,19 @@ layout: default
 title: "Introduction"
 nav_order: 0
 ---
+
 # Introduction
 
+{:.hint}
 
-💡 Questions will be answered in this page:
-
-1. What is RoboCup? 
-2. What is B-Human and its relation to our codebase ([BadgerRLSystem](/docs/Code/BadgerRLSystem/BadgerRLSystem.html))?
-
+> Questions will be answered in this page:
+>
+> 1.  What is RoboCup?
+> 2.  What is B-Human and its relation to our codebase ([BadgerRLSystem](/docs/Code/BadgerRLSystem/BadgerRLSystem.html))?
 
 # RoboCup
 
-[**RoboCup**](https://robocup.org/) is an annual international robotics competition founded in 1996. It has six major domains of competition, each with a number of leagues and sub-leagues. 
+[**RoboCup**](https://robocup.org/) is an annual international robotics competition founded in 1996. It has six major domains of competition, each with a number of leagues and sub-leagues.
 
 The league we are currently participating in is [Standard Platform League (SPL)](https://www.robocup.org/leagues/5), which happens during summer. The current standard robot is the humanoid robot NAO. In the past years, we participated in the SPL Challenge Shield Division, which features 5 vs. 5 matches. In RoboCup 2025, we will participate in the SPL Champions Cup Division, which features 7 vs. 7 matches.
 
