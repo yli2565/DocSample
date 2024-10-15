@@ -145,6 +145,11 @@ General case
 - **First Time login with pre-existing key**
 
   [Write id_rsa key to server video.mp4](./write-id-rsa-key-to-server.mp4)
+  <div class="responsive-iframe">
+    <div class="iframe-container">
+      <iframe src="./write-id-rsa-key-to-server.mp4" allowfullscreen></iframe>
+    </div>
+  </div>
 
   - `-k`: name of the existing key
   - `-w`: write key to server. just like ssh-copy-id
@@ -156,6 +161,11 @@ General case
   - `-w`: write key to server. Not visible in the video but automatically enabled when you create a new key
 
   [Generate rllab_key and write to server video.mp4](./generate-rllab-key-and-write-to-server.mp4)
+  <div class="responsive-iframe">
+    <div class="iframe-container">
+      <iframe src="./generate-rllab-key-and-write-to-server.mp4" allowfullscreen></iframe>
+    </div>
+  </div>
 
   You also need to specify the key and password in all login afterwards
 
@@ -180,6 +190,11 @@ A tmux pseudo terminal will take control after running the command
   As the linux symbolic link doesn’t work with this kind of mount, the **Shared** folder is mounted separately
 
   [Successful mount video](./successful-mount-osx.mp4)
+  <div class="responsive-iframe">
+    <div class="iframe-container">
+      <iframe src="./successful-mount-osx.mp4" allowfullscreen></iframe>
+    </div>
+  </div>
 
 - Linux
   Your home folder on remote machine will appear on the side bar of nautilus (the file browser)
@@ -301,6 +316,11 @@ The following sample is on Linux OS
 - **OSX**
 
   [OSX Demo video](./OSX-demo.mp4)
+  <div class="responsive-iframe">
+    <div class="iframe-container">
+      <iframe src="./OSX-demo.mp4" allowfullscreen></iframe>
+    </div>
+  </div>
 
   If the video is not working, please try [google drive](https://drive.google.com/file/d/1qO7QZ3zcXnnJEN6g3RvYCnZ-Me8rR1AK/view)
 
@@ -309,6 +329,11 @@ The following sample is on Linux OS
 - **WSL2**
 
   [WSL2 Demo video](./WSL2-demo.mp4)
+  <div class="responsive-iframe">
+    <div class="iframe-container">
+      <iframe src="./WSL2-demo.mp4" allowfullscreen></iframe>
+    </div>
+  </div>
 
   If the video is not working, please try [google drive](https://drive.google.com/file/d/1UQOcTw-M_0nQEF_VPGwxBVyhZ8tOG4ng/view)
 
@@ -331,7 +356,12 @@ Updated: Oct 6 2024
 
    - Use Tunneling:
 
-     [Windows VScode tunnel connection video.mp4](./windows-vscode-tunnel-connection.mp4)
+    [Windows VScode tunnel connection video.mp4](./windows-vscode-tunnel-connection.mp4)
+    <div class="responsive-iframe">
+      <div class="iframe-container">
+        <iframe src="./windows-vscode-tunnel-connection.mp4" allowfullscreen></iframe>
+      </div>
+    </div>
 
 2. MacOS (OSX):
 

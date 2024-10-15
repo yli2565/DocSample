@@ -95,3 +95,81 @@ $breakpoint-sm: 500px;
     @include responsive-graph(90%, 250px, 0 5px);
   }
 }
+
+@mixin responsive-iframe($max-width, $aspect-ratio, $padding: 0) {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $padding;
+
+  .iframe-container {
+    position: relative;
+    width: 100%;
+    padding-top: math.div(1, $aspect-ratio) * 100%;
+    overflow: hidden;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+// Styles for responsive iframe
+.responsive-iframe {
+  @include responsive-iframe(
+    $max-width-xl,
+    math.div(16, 9)
+  ); // 16:9 aspect ratio
+
+  @include respond-to($breakpoint-xl) {
+    @include responsive-iframe($max-width-lg, math.div(16, 9));
+  }
+
+  @include respond-to($breakpoint-lg) {
+    @include responsive-iframe($max-width-md, math.div(16, 9));
+  }
+
+  @include respond-to($breakpoint-md) {
+    @include responsive-iframe($max-width-sm, math.div(16, 9));
+  }
+
+  @include respond-to($breakpoint-sm) {
+    @include responsive-iframe(100%, math.div(16, 9), 0 15px);
+  }
+
+  // Additional sizes
+  &.square {
+    @include responsive-iframe(
+      $max-width-md,
+      math.div(1, 1)
+    ); // 1:1 aspect ratio
+
+    @include respond-to($breakpoint-lg) {
+      @include responsive-iframe($max-width-sm, math.div(1, 1));
+    }
+
+    @include respond-to($breakpoint-sm) {
+      @include responsive-iframe(90%, math.div(1, 1), 0 10px);
+    }
+  }
+
+  &.vertical {
+    @include responsive-iframe(
+      $max-width-sm,
+      math.div(9, 16)
+    ); // 9:16 aspect ratio
+
+    @include respond-to($breakpoint-md) {
+      @include responsive-iframe(400px, math.div(9, 16));
+    }
+
+    @include respond-to($breakpoint-sm) {
+      @include responsive-iframe(80%, math.div(9, 16), 0 5px);
+    }
+  }
+}
