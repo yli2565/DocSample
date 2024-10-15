@@ -1,6 +1,7 @@
 ---
-layout: default
+parent: Misc
 title: "Lab Server"
+layout: default
 nav_order: 100
 ---
 

@@ -1,4 +1,5 @@
 ---
+parent: Misc
 layout: default
 title: "RoboCup 2025 Tasks List"
 ---

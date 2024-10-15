@@ -1,6 +1,7 @@
 ---
+title: 2024-10-15 WISC Meeting
 layout: default
-title: "Meeting Notes (10/15/24)"
+parent: Meeting Notes
 ---
 
 - Moved the documentation to GitHub pages.

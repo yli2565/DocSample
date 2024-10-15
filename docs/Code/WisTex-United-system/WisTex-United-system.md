@@ -80,7 +80,7 @@ See B-Human [SimRobot](https://docs.b-human.de/master/simrobot/#simrobot) and [N
 ## Linux
 
 {:.hint}
-It is highly recommend to use the Lab Linux machine since it is already have environment setup, see [here](/docs/Lab%20Server/Lab%20Server.html) for instruction of Lab Machine
+It is highly recommend to use the Lab Linux machine since it is already have environment setup, see [here](/docs/Misc/Lab%20Server/Lab%20Server.html) for instruction of Lab Machine
 
 ### Required Dependency
 
