@@ -32,6 +32,9 @@ nav_order: 100
 
 ### Dependencies
 
+{: .info}
+On WSL, you can use `cat /proc/version` to check the version of WSL. On WSL2 you will see something like `Linux version 5.15.90.1-microsoft-standard-WSL2`
+
 - **WSL1** (Not supported yet)
   ```bash
   sudo apt install nautilus remmina tmux expect bc
@@ -43,6 +46,7 @@ nav_order: 100
   sudo apt install nautilus remmina tmux expect net-tools bc
   ```
 - **OSX**
+
   https://brew.sh/
 
   ```bash
@@ -198,12 +202,14 @@ Before starting a vncserver, ensure you logout from the physical screen
 The following sample is on Linux OS
 
 1.  First, [ssh](..md) into your remote account
-    
+
     ![ssh-login-command.png](./ssh-login-command.png){: .responsive-graph-medium}
     ![ssh-success-tmux-terminal-2.png](./ssh-success-tmux-terminal-2.png){: .responsive-graph-medium}
+
 2.  Run `Shared/start_vnc_server.sh`
-    
+
     ![start-vnc-server.png](./start-vnc-server.png){: .responsive-graph-medium}
+
 3.  Watch the port the server is running on
     In the previous example it is **5960**
 4.  Exit the remote ssh shell
