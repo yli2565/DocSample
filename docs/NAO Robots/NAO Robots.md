@@ -92,13 +92,13 @@ When turned on, the robot can switch between different states as shown in the fo
 # Deployment
 
 {:.hint}
-Please first go through Running project on Nao Physical Robots part 4 under [Environment Setup (Mac, Linux, Windows)](https://www.notion.so/Environment-Setup-Mac-Linux-Windows-10da6491b30a80a884a7db93abfb479b?pvs=21) to learn initial deployment
+Please first go through Nao Deployment under [Running project on SimRobot or Nao Physical Robots](https://wistex-united.github.io/docs/Code/WisTex-United-system/WisTex-United-system.html) to learn initial deployment for MacOS or Linux.
 
 
 
 1. Turn on the robot(s)
 2. Deploy
-    - check deployment instructions in [Environment Setup (Mac, Linux, Windows)](https://www.notion.so/Environment-Setup-Mac-Linux-Windows-10da6491b30a80a884a7db93abfb479b?pvs=21)
+    - Check deployment instructions in [WisTex-United-system](https://wistex-united.github.io/docs/Code/WisTex-United-system/WisTex-United-system.html)
     - In MacOS Xcode, you will see that the active robot has active data in Deploydialog (the image below shows only robot5 is active), but you can only deploy robots simultaneously. One solution is to turn on one for deployment while turning off others.
         
         ![image.png](./image%201.png){: .responsive-graph-medium}
