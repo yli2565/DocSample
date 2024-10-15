@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "BadgerRLSystem"
+title: "WisTex-United-system"
 parent: "Code"
 nav_order: 0
 ---
@@ -14,14 +14,14 @@ nav_order: 0
 {:toc}
 </details>
 
-# BadgerRLSystem
+# WisTex-United-system
 
 {:.hint}
-This page will go through the environment setup for `BadgerRLSystem` for Mac, Linux, and Windows, and how to deploy the project on SimRobot and NAO Robot.
+This page will go through the environment setup for `WisTex-United-system` for Mac, Linux, and Windows, and how to deploy the project on SimRobot and NAO Robot.
 
 # Installation
 
-- BadgerRLSystem is the BadgerRL internal fork of [BHumanCodeRelease](https://github.com/bhuman/BHumanCodeRelease), which replaced some parts to be compatible with RL policy.
+- WisTex-United-system is the BadgerRL internal fork of [BHumanCodeRelease](https://github.com/bhuman/BHumanCodeRelease), which replaced some parts to be compatible with RL policy.
 - The environment setup follows the [B-Human Documentation](https://docs.b-human.de/master/getting-started/initial-setup/), with minor revision
 - Version not matter too much as long as you can successfully running your project on SimRobot.
 
@@ -39,7 +39,7 @@ This page will go through the environment setup for `BadgerRLSystem` for Mac, Li
 ### Setting up the Working Copy
 
 - Cloning the Repository
-  - As the BadgerRLSystem repository uses submodules, it must be cloned using `git clone --recursive`. Downloading it as `zip` or `tar.gz` does not work.
+  - As the WisTex-United-system repository uses submodules, it must be cloned using `git clone --recursive`. Downloading it as `zip` or `tar.gz` does not work.
   - On macOS, the working copy must be either located outside of folders protected by macOS (e.g. `Desktop`, `Documents`, `Downloads`, etc.), or you have to grant full disk access to `/bin/bash`.
   - All paths mentioned in this documentation will be relative to the main directory of the working copy.
 
@@ -91,7 +91,7 @@ It is highly recommend to use the Lab Linux machine since it is already have env
 ### Setting up the Working Copy
 
 - Cloning the Repository
-  - As the BadgerRLSystem repository uses submodules, it must be cloned using `git clone --recursive`. Downloading it as `zip` or `tar.gz` does not work.
+  - As the WisTex-United-system repository uses submodules, it must be cloned using `git clone --recursive`. Downloading it as `zip` or `tar.gz` does not work.
   - All paths mentioned in this documentation will be relative to the main directory of the working copy.
 
 ### Running project on SimRobot or Nao Physical Robots

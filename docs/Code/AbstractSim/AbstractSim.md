@@ -59,14 +59,14 @@ If no policy is provided, the environment will be rendered with randomly sampled
 
 ### Exporting Policies
 
-The `export.py` script can be used to convert a SB3 `.zip` policy into a format that is compatible with BadgerRLSystem. From the top-level directory, run the following command:
+The `export.py` script can be used to convert a SB3 `.zip` policy into a format that is compatible with WisTex-United-system. From the top-level directory, run the following command:
 
 ```
 # policy path is relative to the top-level directory
 python export.py <path to policy>
 ```
 
-The exported `.onnx` policy will be located in the `exported` folder. This file should then be moved into the `Config/Policies/` folder in BadgerRLSystem.
+The exported `.onnx` policy will be located in the `exported` folder. This file should then be moved into the `Config/Policies/` folder in WisTex-United-system.
 
 ## Development
 

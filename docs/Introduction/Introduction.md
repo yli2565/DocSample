@@ -11,7 +11,7 @@ nav_order: 0
 > Questions will be answered in this page:
 >
 > 1.  What is RoboCup?
-> 2.  What is B-Human and its relation to our codebase ([BadgerRLSystem](/docs/Code/BadgerRLSystem/BadgerRLSystem.html))?
+> 2.  What is B-Human and its relation to our codebase ([WisTex-United-system](/docs/Code/WisTex-United-system/WisTex-United-system.html))?
 
 # RoboCup
 
@@ -23,4 +23,4 @@ The league we are currently participating in is [Standard Platform League (SPL)]
 
 B-Human is a RoboCup team that participated in the Standard Platform League. They release their codebase every year in the [**BHumanCodeRelease**](https://github.com/bhuman/BHumanCodeRelease) repo, which consists of about 150000 lines of C++ code. The codebase is long but has a clear structure, and they have a detailed [doc](https://docs.b-human.de/master/) for their codebase.
 
-Our codebase, BadgerRLSystem, is forked from BHumanCodeRelease, with modification to enable reinforcement learning policy running on simulation and physical robots.
+Our codebase, WisTex-United-system, is forked from BHumanCodeRelease, with modification to enable reinforcement learning policy running on simulation and physical robots.
