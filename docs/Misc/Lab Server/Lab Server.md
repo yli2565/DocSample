@@ -29,6 +29,8 @@ nav_order: 100
 
 ### Connect Script
 
+{: .info}
+Please first download this script
 [connect-badgerrl.sh](https://github.com/Badger-RL/LabServerScripts/blob/main/ClientScripts/connect-badgerrl.sh)
 
 ### Dependencies
@@ -131,7 +133,7 @@ Modify config variables in the script
 General case
 
 ```bash
-./ssh-badgerrl -t -u yuhao2024 -s badgerrl -p XXXXX -d 1
+./connect-badgerrl -t -u yuhao2024 -s badgerrl -p XXXXX -d 1
 ```
 
 - `-t`: ssh tunnel mode
@@ -179,7 +181,7 @@ A tmux pseudo terminal will take control after running the command
 ### Connect File System
 
 ```bash
-./ssh-badgerrl -m -u yuhao2024 -s badgerrl -p XXXXX -d 1
+./connect-badgerrl -m -u yuhao2024 -s badgerrl -p XXXXX -d 1
 ```
 
 - `-m`: sftp mount mode
