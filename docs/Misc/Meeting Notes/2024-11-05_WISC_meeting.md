@@ -34,20 +34,20 @@ parent: Meeting Notes
 
 ## Implementation Updates - Zisen
 ### Code Deployment
-- Successfully deployed code to robot
+- Successfully deployed and verify bhuman appraoch to robot
 - Working on classification model integration
 
-### Data Processing
+### Data Processing & training
 - Annotated ~200 gestures from BHuman
-- Most gestures are standing poses
-- Using GRU model with limited success due to small dataset
+- Data is small, distribution on gesture is not uniform, most gesture is static
+- Using CNN+GRU model with limited success due to small dataset and lack of temporal information
 
 ## Abstract Sim V2 Discussion - Multiple Participants
 ### Current Status - Edison & Josiah
 - Edison working on setup with Abhinav's help
 - Need to calibrate sim to match actual robots
 
-### Performance Measurement - Jihan
+### Performance Measurement - Zhihan
 - Process: Recording and measuring robot movements
 - Consideration of surface variations
 - Qualitative assessment of movement speeds
@@ -80,7 +80,7 @@ parent: Meeting Notes
 - Need to verify SimRobot transfer (don't think there would be any problem)
 - Pending video verification of metrics accuracy
 
-## Training Pipeline - Sidant
+## Training Pipeline - Siddhant
 ### Current Focus
 - Streamlining data collection process
 - Reducing human bottlenecks in training
@@ -92,7 +92,7 @@ parent: Meeting Notes
 
 ## Cross-Team Collaboration - Josiah
 ### Imitation Learning Coordination
-- Suggestion to connect Sidant with Yuhao and Zisen
+- Suggestion to connect Siddhant with Yuhao and Zisen
 - Shared challenges in:
   - Logging appropriate data
   - Robot initialization
@@ -103,14 +103,15 @@ parent: Meeting Notes
 - Proposed solution: Focus on walk velocities
 - Need to infer commands from observations
 
-## Gesture Recognition Rule - ZiSen
+## Gesture Recognition Rule - Zisen
 ### Competition Rules - Josiah
 - 2024/2025 rules under development now
-- Should be anticipated changes to gesture recognition
-- Reference to June 17th SPL rules
+- Shouldn't anticipated much changes in gesture recognition
+- Reference to 2024 June 17th SPL rules
 
-## Meeting Planning - Josiah
+# Meeting Planning - Josiah
 - Next week's meeting to proceed without Josiah
 - Will/Adam to handle meeting setup
-- Regular attendees (Zhihan, Sidant) to maintain continuity
+- Regular attendees (Zhihan, Siddhant) to maintain continuity
+
 
