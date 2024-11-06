@@ -43,7 +43,7 @@ parent: Meeting Notes
 - GRU model implementation showing suboptimal results
 - Poor validation performance attributed to small dataset size
 - Discussion about temporal information necessity
-- Reference to BeHuman's successful 2022 approach
+- Reference to NomadZ's successful 2022 approach
 - Consideration of data augmentation needs
 
 ## Log Reader Issues - Yuhao & Josiah
@@ -136,7 +136,7 @@ parent: Meeting Notes
 - Looking at the Visual Referee Detection on Nao Robots for RoboCup SPL 2022 - Lukas Molnar
 - Follow up next week
 
-## Streamline Data Collection & Imitation Learning - Sidant
+## Streamline Data Collection & Imitation Learning - Siddhant
 
 - Streamlining data collection process
 - Improving training pipeline efficiency

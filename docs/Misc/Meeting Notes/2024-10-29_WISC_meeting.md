@@ -9,7 +9,7 @@ parent: Meeting Notes
 
 - BHuman dataset: select 2-3 most important images per second for training
 
-## ZiSen
+## Zisen
 
 - Confirmed BHuman logic working in wistex system
 
