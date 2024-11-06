@@ -3,6 +3,7 @@ layout: default
 title: "PYLogReader"
 parent: "Code"
 ---
+
 <details open markdown="block">
   <summary>
     Table of contents
@@ -29,8 +30,10 @@ There's an easy to use [CLI version](https://github.com/wistex-united/py-log-rea
 usage: LogReaderCLI.py [-h] [--numworkers NUMWORKERS]
                        [--threads {Upper,Lower,Motion,Audio,Cognition,Referee} [{Upper,Lower,Motion,Audio,Cognition,Referee} ...]]
                        [--start-time START_TIME] [--end-time END_TIME]
-                       [--start-frame START_FRAME] [--end-frame END_FRAME] [--profile]
+                       [--start-frame START_FRAME] [--end-frame END_FRAME]
+                       [--outdir OUTDIR] [--profile]
                        inputFile
+
 Parallel log file processor
 
 positional arguments:
@@ -43,31 +46,36 @@ options:
   --threads {Upper,Lower,Motion,Audio,Cognition,Referee} [{Upper,Lower,Motion,Audio,Cognition,Referee} ...]
                         List of threads to process (default: all frames)
   --start-time START_TIME
-                        Start time in format hour:min:sec.millisecond, sec is mandatory, others
-                        are optional
-  --end-time END_TIME   End time in format hour:min:sec.millisecond, sec is mandatory, others are
-                        optional
+                        Start time in format hour:min:sec.millisecond, sec is
+                        mandatory, others are optional
+  --end-time END_TIME   End time in format hour:min:sec.millisecond, sec is
+                        mandatory, others are optional
   --start-frame START_FRAME
                         Start frame number
   --end-frame END_FRAME
                         End frame number
+  --outdir OUTDIR       Custom output directory for processed frames and
+                        images
   --profile             Enable performance profiling
 
 Examples:
   # Basic usage with defaults
   LogReaderCLI.py input.log
-  
+
   # Specify number of workers and threads
   LogReaderCLI.py input.log --numworkers 4 --threads Upper Lower
-  
+
   # Process time range
   LogReaderCLI.py input.log --start-time 0:00:00.000 --end-time 1:30:00.000
-  
+
   # Process frame range
   LogReaderCLI.py input.log --start-frame 1000 --end-frame 2000
-  
+
   # Enable profiling
   LogReaderCLI.py input.log --profile
+
+  # Specify custom output directory
+  LogReaderCLI.py input.log --outdir /path/to/output
 ```
 
 ## Log Interface
@@ -88,35 +96,41 @@ Purely abstract class, define the shared interface for all log classes
 Some important attributes:
 
 - `parent`: Reference to containing object
-   - Frames reference UncompressedChunk
-   - Messages reference Frame
-   - Used for hierarchy traversal
+
+  - Frames reference UncompressedChunk
+  - Messages reference Frame
+  - Used for hierarchy traversal
 
 - `children`: List of contained objects
-   - UncompressedChunk contains Frames
-   - Frames contain Messages
-   - Used for iteration and tree structure
+
+  - UncompressedChunk contains Frames
+  - Frames contain Messages
+  - Used for iteration and tree structure
 
 - `log`: Reference to root Log object
-   - Quick access to global log state
-   - Caches common data
-   - Access to Chunks like TypeInfo, MessageID
+
+  - Quick access to global log state
+  - Caches common data
+  - Access to Chunks like TypeInfo, MessageID
 
 - `startByte`: Starting byte position in log file
-   - Used for reading data
-   - Defines object boundaries
+
+  - Used for reading data
+  - Defines object boundaries
 
 - `endByte`: Ending byte position in log file
-   - Used for reading data
-   - Defines object boundaries
+
+  - Used for reading data
+  - Defines object boundaries
 
 - `index`: Relative position in parent's children
-   - Frame 5 in UncompressedChunk
-   - Message 3 in Frame 5
+
+  - Frame 5 in UncompressedChunk
+  - Message 3 in Frame 5
 
 - `absIndex`: Absolute position in log file
-   - Unique identifier across entire log
-   - Used for caching and lookups
+  - Unique identifier across entire log
+  - Used for caching and lookups
 
 ### LogInterfaceAccessorClass vs LogInterfaceInstanceClass
 
@@ -124,19 +138,19 @@ There are two kinds of interface, accessor and instance, which are very differen
 
 The root log object and all chunk objects are always instance class, while message and frame objects can be either accessor or instance.
 
-| Aspect | LogInterfaceAccessorClass | LogInterfaceInstanceClass |
-|--------|----------|----------|
-| **Purpose** | Used for efficient memory access in large log files | Used for complete in-memory representation |
-| **Memory Usage** | Light-weight, only loads data on demand | Heavier, keeps all data in memory |
-| **Parent Resolution** | Deduces parent through index information | Directly stores parent reference |
-| **Mutability** | Can be frozen to prevent index changes | Frozen by default |
-| **Index Setting** | Can change index to access different data | Fixed index, cannot be changed |
-| **Data Access** | Uses memory mapped file for on-demand loading | Direct access to parsed data |
-| **Caching** | Caches data in Log class | Store data in instance itself |
-| **Children Handling** | Creates children accessor on demand | Stores children instances directly |
-| **Serialization** | Stores minimal state (mainly indices) | Stores complete object state |
-| **Parsing Strategy** | Parse-on-demand (lazy loading) | Parse-all-at-once (eager loading) |
-| **Memory Trade-off** | Lower memory, higher disk I/O | Higher memory, lower disk I/O |
+| Aspect                | LogInterfaceAccessorClass                           | LogInterfaceInstanceClass                  |
+| --------------------- | --------------------------------------------------- | ------------------------------------------ |
+| **Purpose**           | Used for efficient memory access in large log files | Used for complete in-memory representation |
+| **Memory Usage**      | Light-weight, only loads data on demand             | Heavier, keeps all data in memory          |
+| **Parent Resolution** | Deduces parent through index information            | Directly stores parent reference           |
+| **Mutability**        | Can be frozen to prevent index changes              | Frozen by default                          |
+| **Index Setting**     | Can change index to access different data           | Fixed index, cannot be changed             |
+| **Data Access**       | Uses memory mapped file for on-demand loading       | Direct access to parsed data               |
+| **Caching**           | Caches data in Log class                            | Store data in instance itself              |
+| **Children Handling** | Creates children accessor on demand                 | Stores children instances directly         |
+| **Serialization**     | Stores minimal state (mainly indices)               | Stores complete object state               |
+| **Parsing Strategy**  | Parse-on-demand (lazy loading)                      | Parse-all-at-once (eager loading)          |
+| **Memory Trade-off**  | Lower memory, higher disk I/O                       | Higher memory, lower disk I/O              |
 
 {: .attention}
 All accessor objects are created by root log object with `getMessageAccessor` or `getFrameAccessor` and it have more reliance on root log object than its parent.
@@ -174,6 +188,7 @@ The [Option 1](#option-1-small-logs--1gb) is broken by some update, please don't
 There are two main approaches to preprocessing the log file, depending on its size:
 
 #### Option 1: Small Logs (< 1GB)
+
 For smaller logs, you can load everything into memory:
 
 ```python
@@ -186,6 +201,7 @@ log.parseBytes()  # Parse all messages
 ```
 
 #### Option 2: Large Logs (≥ 1GB)
+
 For larger logs, use memory-efficient accessor mode:
 
 ```python
@@ -245,6 +261,7 @@ ball_percept = frame["BallPercept"] if "BallPercept" in frame else None
 ### Memory Considerations
 
 - Instance mode (small logs):
+
   - Pros: Faster repeated access, simpler operation
   - Cons: High memory usage (approximately 15x log file size)
 
@@ -274,12 +291,12 @@ for frame in frame_accessor:
     if "RobotPose" in frame:
         robot_pose = frame["RobotPose"]
         # Process robot pose data
-        
+
     # Handle optional representations
     ball_data = frame["BallPercept"] if "BallPercept" in frame else None
     if ball_data:
         # Process ball data
-        
+
     # Work with multiple annotations
     for annotation in frame.Annotations:
         # Process each annotation
