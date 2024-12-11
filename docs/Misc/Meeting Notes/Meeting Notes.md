@@ -15,3 +15,4 @@ nav_order: 50
 | Oct 29, 2024 | [2024-10-29 WISC Meeting](./2024-10-29_WISC_meeting.html) |          |
 | Nov 05, 2024 | [2024-11-05 WISC Meeting](./2024-11-05_WISC_meeting.html) |          |
 | Nov 12, 2024 | [2024-11-12 WISC Meeting](./2024-11-12_WISC_meeting.html) |          |
+| Dec 03, 2024 | [2024-12-03 WISC Meeting](./2024-12-03_WISC_meeting.html) |          |
